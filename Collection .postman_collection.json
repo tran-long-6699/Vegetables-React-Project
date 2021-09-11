@@ -1,0 +1,528 @@
+{
+	"info": {
+		"_postman_id": "241a185d-4a5e-4099-acb3-c36fdffa3927",
+		"name": "Collection ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"daiduong1871999@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authorities",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYWlkdW9uZzE4NzE5OTlAZ21haWwuY29tIiwiaWF0IjoxNjMxMjgyMDA3LCJleHAiOjE2MzEzNjg0MDd9.2R_M6xchfWnU2211c6-_0KmxBh3HgehDHC-0wLiDlX5kIH8w7XtzykmHSmO6aNsi4RRQk2pfD6IsI-FKwn7KPQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roles\": {\r\n        \"roleid\": \"ROLE_PM\",\r\n        \"rolename\": \"PHẦN MỀM\"\r\n    },\r\n    \"user\": {\r\n        \"activated\": true,\r\n        \"authprovider\": \"string\",\r\n        \"createdate\": \"2021-09-10T14:20:27.294Z\",\r\n        \"fullname\": \"string\",\r\n        \"gender\": true,\r\n        \"image\": \"string\",\r\n        \"roles\": [\r\n            {\r\n                \"roleid\": \"string\",\r\n                \"rolename\": \"string\"\r\n            }\r\n        ],\r\n        \"username\": \"daiduong1871999@gmail.com\",\r\n        \"verifycode\": \"string\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/veg/admin/authorities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veg",
+								"admin",
+								"authorities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYWlkdW9uZzE4NzE5OTlAZ21haWwuY29tIiwiaWF0IjoxNjMxMjgyMDA3LCJleHAiOjE2MzEzNjg0MDd9.2R_M6xchfWnU2211c6-_0KmxBh3HgehDHC-0wLiDlX5kIH8w7XtzykmHSmO6aNsi4RRQk2pfD6IsI-FKwn7KPQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"address\": \"Cầu Quan - Tiểu Cần - Trà Vinh\",\r\n  \"fullname\": \"Trần Long\",\r\n  \"modeofpayment\": \"ATM\",\r\n  \"orderDetails\": [\r\n    {\r\n      \"image\": \"null\",\r\n      \"priceaverage\": 500000,\r\n      \"productid\": \"Veg01\",\r\n      \"productname\": \"Ớt Chuông\",\r\n      \"soLuong\": 2\r\n    }\r\n  ],\r\n  \"phone\": \"0702362681\",\r\n  \"subtotal\": 1000000,\r\n  \"total\": 1030000,\r\n  \"username\": \"daiduong1871999@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/veg/customer/checkout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veg",
+								"customer",
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Provider",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYWlkdW9uZzE4NzE5OTlAZ21haWwuY29tIiwiaWF0IjoxNjMxMjgyMDA3LCJleHAiOjE2MzEzNjg0MDd9.2R_M6xchfWnU2211c6-_0KmxBh3HgehDHC-0wLiDlX5kIH8w7XtzykmHSmO6aNsi4RRQk2pfD6IsI-FKwn7KPQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"address\": \"Trà Vinh\",\r\n  \"phone\": \"0702362681\",\r\n  \"providername\": \"ComLala\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/veg/admin/provider",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veg",
+								"admin",
+								"provider"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "Success",
+					"item": [
+						{
+							"name": "Product",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/veg/api/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"veg",
+										"api",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Category",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/veg/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"veg",
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Provider",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYWlkdW9uZzE4NzE5OTlAZ21haWwuY29tIiwiaWF0IjoxNjMxMjgxNTg0LCJleHAiOjE2MzEzNjc5ODR9.yJyeRwuQSKDxh_I0Ej7LxqZmlnli0FkP8lxcqOVlxOpdoPkllfjbbgOac77bArXb-d6B7SOc8fweAXNIcXwY3A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYWlkdW9uZzE4NzE5OTlAZ21haWwuY29tIiwiaWF0IjoxNjMxMjgyMDA3LCJleHAiOjE2MzEzNjg0MDd9.2R_M6xchfWnU2211c6-_0KmxBh3HgehDHC-0wLiDlX5kIH8w7XtzykmHSmO6aNsi4RRQk2pfD6IsI-FKwn7KPQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/veg/admin/provider",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"veg",
+										"admin",
+										"provider"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYWlkdW9uZzE4NzE5OTlAZ21haWwuY29tIiwiaWF0IjoxNjMxMjgxNTg0LCJleHAiOjE2MzEzNjc5ODR9.yJyeRwuQSKDxh_I0Ej7LxqZmlnli0FkP8lxcqOVlxOpdoPkllfjbbgOac77bArXb-d6B7SOc8fweAXNIcXwY3A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYWlkdW9uZzE4NzE5OTlAZ21haWwuY29tIiwiaWF0IjoxNjMxMjgyMDA3LCJleHAiOjE2MzEzNjg0MDd9.2R_M6xchfWnU2211c6-_0KmxBh3HgehDHC-0wLiDlX5kIH8w7XtzykmHSmO6aNsi4RRQk2pfD6IsI-FKwn7KPQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/veg/admin/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"veg",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Roles",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYWlkdW9uZzE4NzE5OTlAZ21haWwuY29tIiwiaWF0IjoxNjMxMjgyMDA3LCJleHAiOjE2MzEzNjg0MDd9.2R_M6xchfWnU2211c6-_0KmxBh3HgehDHC-0wLiDlX5kIH8w7XtzykmHSmO6aNsi4RRQk2pfD6IsI-FKwn7KPQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/veg/admin/roles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"veg",
+										"admin",
+										"roles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Authorities",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYWlkdW9uZzE4NzE5OTlAZ21haWwuY29tIiwiaWF0IjoxNjMxMjgyMDA3LCJleHAiOjE2MzEzNjg0MDd9.2R_M6xchfWnU2211c6-_0KmxBh3HgehDHC-0wLiDlX5kIH8w7XtzykmHSmO6aNsi4RRQk2pfD6IsI-FKwn7KPQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/veg/admin/authorities",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"veg",
+										"admin",
+										"authorities"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ProductByCategory",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/veg/api/product/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"veg",
+										"api",
+										"product",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "Provider",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYWlkdW9uZzE4NzE5OTlAZ21haWwuY29tIiwiaWF0IjoxNjMxMjgyMDA3LCJleHAiOjE2MzEzNjg0MDd9.2R_M6xchfWnU2211c6-_0KmxBh3HgehDHC-0wLiDlX5kIH8w7XtzykmHSmO6aNsi4RRQk2pfD6IsI-FKwn7KPQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"address\": \"Kiốt Số 2, Chợ Hàng Bông Phú Hòa, P. Phú Hòa, Tp. Thủ Dầu Một, Bình Dương\",\r\n  \"phone\": \"0351231231\",\r\n  \"providerid\": \"Com1\",\r\n  \"providername\": \"Công Ty TNHH Một Thành Viên Rau Củ Quả Thanh Hà\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/veg/admin/provider/Com1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veg",
+								"admin",
+								"provider",
+								"Com1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "Authorities",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYWlkdW9uZzE4NzE5OTlAZ21haWwuY29tIiwiaWF0IjoxNjMxMjgyMDA3LCJleHAiOjE2MzEzNjg0MDd9.2R_M6xchfWnU2211c6-_0KmxBh3HgehDHC-0wLiDlX5kIH8w7XtzykmHSmO6aNsi4RRQk2pfD6IsI-FKwn7KPQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/veg/admin/authorities/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veg",
+								"admin",
+								"authorities",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Provider",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYWlkdW9uZzE4NzE5OTlAZ21haWwuY29tIiwiaWF0IjoxNjMxMjgyMDA3LCJleHAiOjE2MzEzNjg0MDd9.2R_M6xchfWnU2211c6-_0KmxBh3HgehDHC-0wLiDlX5kIH8w7XtzykmHSmO6aNsi4RRQk2pfD6IsI-FKwn7KPQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/veg/admin/provider/Com1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veg",
+								"admin",
+								"provider",
+								"Com1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
